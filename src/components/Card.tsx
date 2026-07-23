@@ -1,11 +1,14 @@
 import './Card.css'
 
-export function Card() {
+type CardProps = {
+    weather: null
+}
+
+export function Card( {weather}:CardProps ) {
     return (
         <div className="card">
-            <div className="cityDisplay"></div>
-
-            <div className="temp-container">
+            <div className="cityDisplay">{JSON.stringify(weather)}</div>
+            <div className="temp-container" >
                 <span className="tempMain"></span>
                 <span className="weatherEmoji"></span>
             </div>
