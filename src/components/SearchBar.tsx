@@ -1,6 +1,6 @@
 import './SearchBar.css'
 import { useState } from 'react'
-import type { GeoDataFn } from '../App'
+import type { GeoDataFn } from '../types'
 
 type SearchBarProps = {
     geoData: GeoDataFn

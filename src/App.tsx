@@ -1,28 +1,11 @@
 import { useState } from 'react'
 import axios from 'axios'
 import { SearchBar } from './components/SearchBar'
-import { Card } from './components/Card'
+import { CardCurrent } from './components/CardCurrent'
+import type { GeoResult, weatherDataResult, GeoDataFn } from '../src/types'
 import './App.css'
 
-export type GeoResult = {
-    id: number;
-    name: string;
-    latitude: number;
-    longitude: number;
-    country: string;
-}
 
-export type weatherDataResult = {
-  current: {
-    temperature_2m: number;
-    apparent_temperature: number;
-    relative_humidity_2m: number;
-    weather_code: number;
-    wind_speed_10m: number;
-  }
-}
-
-export type GeoDataFn = (city: string) => Promise<void>;
 function App() {
 
   const [weather, setWeather] = useState<GeoResult | null>(null);
@@ -39,7 +22,7 @@ function App() {
   return (
     <>
     <SearchBar geoData={geoData} />
-    <Card weather={weather} weatherData={weatherData} />
+    <CardCurrent weather={weather} weatherData={weatherData} />
     </>
   )
 }

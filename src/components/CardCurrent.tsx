@@ -1,13 +1,12 @@
 import './Card.css'
-import type {GeoResult} from '../App'
-import type {weatherDataResult} from '../App'
+import type { GeoResult, weatherDataResult } from '../types'
 
 type CardProps = {
     weather: GeoResult | null
     weatherData: weatherDataResult | null
 }
 
-export function Card( {weather, weatherData}:CardProps) {
+export function CardCurrent( {weather, weatherData}:CardProps) {
     if (!weather || !weatherData) {
         return null;
     }
