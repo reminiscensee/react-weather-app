@@ -2,6 +2,7 @@ import { useState } from 'react'
 import axios from 'axios'
 import { SearchBar } from './components/SearchBar'
 import { CardCurrent } from './components/CardCurrent'
+import { CardHourly } from './components/CardHourly'
 import { SwitchButtons } from './components/SwitchButtons'
 import type { GeoResult, weatherDataResult, GeoDataFn } from '../src/types'
 import './App.css'
@@ -11,7 +12,7 @@ function App() {
 
   const [weather, setWeather] = useState<GeoResult | null>(null);
   const [weatherData, setWeatherData]  = useState<weatherDataResult | null>(null)
-  const [view, setView] = useState<'current' | 'hourly' | 'daily'>('current');
+  const [view, setView] = useState<'current' | 'forecast'>('current');
 
   const geoData: GeoDataFn = async (city) => {
     const response = await axios.get(`https://geocoding-api.open-meteo.com/v1/search?name=${city}&count=1&language=en&format=json`)
@@ -25,7 +26,9 @@ function App() {
     <>
     <SearchBar geoData={geoData} />
     <SwitchButtons view={view} setView={setView}/>
-    <CardCurrent weather={weather} weatherData={weatherData} />
+    {view === 'current' && <CardCurrent weather={weather} weatherData={weatherData} />}
+    {view === 'forecast' && <CardHourly weather={weather} weatherData={weatherData} />}
+
     </>
   )
 }

@@ -42,6 +42,6 @@ export type GeoDataFn = (city: string) => Promise<void>;
 
 
 export type ButtonsType = {
-    view: React.SetStateAction<'current' | 'hourly' | 'daily'>;
-    setView: React.Dispatch<React.SetStateAction<'current' | 'hourly' | 'daily'>>;
+    view: React.SetStateAction<'current' | 'forecast'>;
+    setView: React.Dispatch<React.SetStateAction<'current' | 'forecast'>>;
 }
