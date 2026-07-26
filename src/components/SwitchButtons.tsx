@@ -9,7 +9,7 @@ export function SwitchButtons({ view, setView}:ButtonsType) {
             onClick={() => setView('current')}>Current</button>
             <button 
             className={view === 'forecast' ? 'active-button' : 'inactive-button'}
-            onClick={() => setView('forecast')}>Hourly</button>
+            onClick={() => setView('forecast')}>Forecast</button>
         </div>
     )
 

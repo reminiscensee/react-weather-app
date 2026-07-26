@@ -2,7 +2,7 @@ import { useState } from 'react'
 import axios from 'axios'
 import { SearchBar } from './components/SearchBar'
 import { CardCurrent } from './components/CardCurrent'
-import { CardHourly } from './components/CardHourly'
+import { Forecast } from './components/Forecast'
 import { SwitchButtons } from './components/SwitchButtons'
 import type { GeoResult, weatherDataResult, GeoDataFn } from '../src/types'
 import './App.css'
@@ -27,7 +27,7 @@ function App() {
     <SearchBar geoData={geoData} />
     <SwitchButtons view={view} setView={setView}/>
     {view === 'current' && <CardCurrent weather={weather} weatherData={weatherData} />}
-    {view === 'forecast' && <CardHourly weather={weather} weatherData={weatherData} />}
+    {view === 'forecast' && <Forecast weather={weather} weatherData={weatherData} />}
 
     </>
   )
