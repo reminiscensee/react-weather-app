@@ -1,5 +1,6 @@
 import './Card.css'
 import type { GeoResult, weatherDataResult } from '../types'
+import {getWeatherEmoji} from '../getWeatherEmoji'
 
 type CardProps = {
     weather: GeoResult | null;
@@ -20,28 +21,7 @@ export function Forecast({ weather, weatherData }: CardProps) {
     if (startIndex === -1) {
         return null;
     }
-    function getWeatherEmoji(code:number) {
-        switch (true) {
-            case (code >= 95 && code < 100):
-                return "⛈️";
-            case (code >= 61 && code < 80):
-                return "🌧️";
-            case (code >= 80 && code < 83):
-                return "❄️";
-            case (code >= 45 && code < 48):
-                return "🌫️";
-            case (code === 0):
-                return "☀️";
-            case (code === 3):
-                return "☁️";
-            case (code === 1):
-                return "🌤️";
-            case (code === 2):
-                return "⛅";
-            default:
-                return "❓";
-        }
-    }
+    
 
 
     return (
