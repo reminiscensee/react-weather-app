@@ -22,6 +22,7 @@ export type weatherDataResult = {
     wind_speed_10m: number[];
     apparent_temperature: number[];
     precipitation_probability: number[];
+    is_day: number[];
   }
   daily: {
     time: string[];

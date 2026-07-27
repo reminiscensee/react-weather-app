@@ -28,10 +28,11 @@ export function Forecast({ weather, weatherData }: CardProps) {
                 {weatherData.hourly.time.slice(startIndex, startIndex + 24).map((timeItem, index) => {
                     const temperatureIndex = index + startIndex;
                     const currentCode = weatherData.hourly.weather_code[temperatureIndex];
+                    const isDayCode = weatherData.hourly.is_day[temperatureIndex]
                     return (
                         <div key={timeItem} className='hourly-item'>
                             <p>{weatherData.hourly.temperature_2m[temperatureIndex]} °C</p>
-                            <p>{getWeatherEmoji(currentCode)}</p>
+                            <p>{getWeatherEmoji(currentCode, isDayCode)}</p>
                             <p>{timeItem.split('T')[1]}</p>
                         </div>
                     )

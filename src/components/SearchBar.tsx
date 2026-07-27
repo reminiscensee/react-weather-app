@@ -12,6 +12,7 @@ export function SearchBar({ geoData }:SearchBarProps) {
     function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
         event.preventDefault();
         geoData(text);
+        setText('');
     }
     function findCity(event: React.ChangeEvent<HTMLInputElement>){
         setText(event.target.value);
