@@ -1,0 +1,48 @@
+
+@keyframes slideDownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.error {
+  position: relative; 
+  margin: 12px auto 20px auto; 
+  padding: 20px 40px;
+  max-width: max-content; 
+  
+  
+  background-color: #fee2e2; 
+  color: #991b1b;            
+  border: 1px solid #f87171;
+  border-radius: 8px;
+  
+  
+  font-size: 20px;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.1);
+  
+  
+  animation: slideDownFade 0.3s ease-out forwards;
+}
+
+
+.error::before {
+  content: '';
+  position: absolute;
+  top: -6px; 
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg); 
+  width: 10px;
+  height: 10px;
+  
+ 
+  background-color: #fee2e2;
+  border-left: 1px solid #f87171;
+  border-top: 1px solid #f87171;
+}
