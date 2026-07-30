@@ -13,6 +13,7 @@ export type weatherDataResult = {
     relative_humidity_2m: number;
     weather_code: number;
     wind_speed_10m: number;
+    is_day: number
   }
   hourly: {
     time: string[];
