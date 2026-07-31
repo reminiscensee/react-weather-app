@@ -1,4 +1,4 @@
-import './Card.css'
+import './Forecast.css'
 import type { GeoResult, weatherDataResult } from '../types'
 import { getWeatherEmoji } from '../getWeatherEmoji'
 

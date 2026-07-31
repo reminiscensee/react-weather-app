@@ -37,7 +37,7 @@ function App() {
   }
 
   return (
-    <>
+    <div className='app-container'>
       <SearchBar geoData={geoData} />
 
       {error && <div className='error'>{error}</div>}
@@ -49,7 +49,7 @@ function App() {
       </>}
      
 
-    </>
+    </div>
   )
 }
 
