@@ -45,7 +45,7 @@ export function Forecast({ weather, weatherData }: CardProps) {
     }
 
     return (
-        <>
+        <div className='forecast-card'>
             <div className='hourly-wrapper'>
                 <button 
                     onMouseDown={() => startScrolling('left')}
@@ -111,6 +111,6 @@ export function Forecast({ weather, weatherData }: CardProps) {
                     )
                 })}
             </div>
-        </>
+        </div>
     )
 }

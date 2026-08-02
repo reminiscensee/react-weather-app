@@ -18,7 +18,7 @@ export function CardCurrent( {weather, weatherData}:CardProps) {
             <div className="city-display">{weather.name}</div>
             <div className="temp-container">
                 <span className="temp-feels-like">Temperature: {weatherData.current.temperature_2m} °C</span>
-                <span className="weatherEmoji">{getWeatherEmoji(weatherData.current.weather_code, weatherData.current.is_day)}</span>
+                <span className="weather-emoji">{getWeatherEmoji(weatherData.current.weather_code, weatherData.current.is_day)}</span>
             </div>
             <span className="temp">Feels like: {weatherData.current.apparent_temperature} °C</span>
             <span className="humidity">Humidity: {weatherData.current.relative_humidity_2m}%</span>

@@ -24,7 +24,7 @@
     margin-top: 24px;
     margin-bottom: 24px;
 }   
-.weatherEmoji {
+.weather-emoji {
     font-size: 40px;
 }
 .humidity {
@@ -46,4 +46,29 @@
     text-align: center;
     padding-bottom: 24px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 550px) {
+    .card {
+        width: 70%;
+        padding: 30px 20px;
+        min-width: 280px;
+    }
+    .city-display, .temp-feels-like, .weather-emoji {
+        font-size: 18px;
+    }
+    button[type="submit"]{
+        font-size: 12px;
+        padding: 8px 14px;
+    }
+    .wind-speed, .humidity, .temp {
+        font-size: 14px;
+    }
+    .city-input{
+        font-size: 16px;
+        padding: 6px 12px;
+    }
+    .weather-form{
+        gap: 8px;
+    }
 }

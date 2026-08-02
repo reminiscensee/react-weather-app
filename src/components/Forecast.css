@@ -1,21 +1,33 @@
+.forecast-card {
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 16px;
+    box-sizing: border-box;
+    min-width: 0; 
+    overflow: hidden; 
+}
+
 .hourly-wrapper {
     display: flex;
     align-items: center;
     gap: 12px;
     width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .hourly-card {
     display: flex;
     overflow-x: auto;
+    overflow-y: hidden;
     padding-bottom: 12px;
     margin-top: 20px;
     gap: 16px;
     flex: 1;
-    max-width: 1200px; 
     width: 100%; 
-    margin-inline: auto;
-
+    max-width: 100%; 
+    min-width: 0;
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
@@ -49,44 +61,49 @@
     margin-top: 24px;
     padding-top: 16px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+    box-sizing: border-box;
 }
 
 .daily-item {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 8px 16px;
-    background-color: rgba(255, 255, 255, 0.03); 
+    width: 100%;
+    padding: 8px 12px;
+    box-sizing: border-box;
+    background: rgba(255,255,255,0.03);
     border-radius: 12px;
-    font-size: 16px;
+    gap: 8px;
 }
 
 .daily-day {
-    width: 50px;
+    flex: 1;
+    min-width: 0;
     font-weight: 500;
-    color: #e0e0e0;
 }
 
 
 .daily-condition {
+    flex: 1;
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 8px;
-    width: 60px; 
+    gap: 6px;
+    min-width: 0;
 }
 
 .daily-precip {
     font-size: 12px;
-    color: #64b5f6; 
-    font-weight: bold;
+    color: #64b5f6;
+    white-space: nowrap;
 }
 
 
 .daily-temps {
+    flex: 1;
     display: flex;
     justify-content: flex-end;
-    gap: 16px;
-    width: 80px;
+    gap: 8px;
+    min-width: 0;
 }
 
 .temp-max {
@@ -96,6 +113,10 @@
 
 .temp-min {
     color: #9e9e9e; 
+}
+.temp-max,
+.temp-min {
+    white-space: nowrap;
 }
 .scroll-btn {
     flex-shrink: 0; 
@@ -127,4 +148,10 @@
 }
 .scroll-btn:active {
     transform: scale(0.95); 
+}
+
+@media (max-width: 768px) {
+    .scroll-btn {
+        display: none;
+    }
 }

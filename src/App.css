@@ -2,7 +2,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1200px;
   width: 100%;
+  overflow-x: hidden;
+  min-width: 0; 
 }
 
 @keyframes slideDownFade {
