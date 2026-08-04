@@ -1,75 +1,64 @@
-# React + TypeScript + Vite
+# 🌤️ React Weather Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive, feature-rich weather application built with React and TypeScript that provides real-time weather updates and detailed forecasts.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
+[Тут буде посилання на твій задеплоєний сайт на Vercel]
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 📸 Screenshots
 
-## React Compiler
+### Current Weather View
+![Current Weather](./weather-app-CardCurrent.png)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Detailed Forecast View
+![Forecast View](./weather-app-Forecast.png)
 
-## Expanding the ESLint configuration
+## ✨ Features
+- **Real-time Weather Data:** Accurate current weather conditions.
+- **Detailed Forecasts:** Interactive hourly and daily weather projections.
+- **Responsive Layout:** Fully optimized for both mobile and desktop screens using modern CSS Flexbox and media queries.
+- **Smooth Navigation:** Custom horizontal scrolling for hourly forecasts, specifically adapted for touch devices.
+- **Interactive UI:** Dynamic toggles between 'Current' and 'Forecast' views.
+- **Error Handling:** Graceful error messages and loading states.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Tech Stack
+- **Frontend:** React, TypeScript
+- **Styling:** Vanilla CSS3 — custom Flexbox layouts, no framework
+- **HTTP:** Axios
+- **Testing:** Vitest (unit tests)
+- **Build Tool:** Vite
+- **API:** Open-Meteo (free, no API key required)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🧠 Technical Highlights
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **Custom Scroll Mechanics:** Implemented two independent `useRef` hooks to manage seamless horizontal scrolling for the hourly forecast, ensuring a smooth, native-feeling experience on touch devices without relying on external carousel libraries.
+- **Advanced Data Processing:** Efficiently processed complex API responses using parallel arrays. Utilized precise array manipulation methods (`findIndex`, `slice`) to extract and display the exact forecast windows needed for the UI.
+- **Comprehensive WMO Code Mapping:** Successfully handled all 28 distinct WMO (World Meteorological Organization) weather codes returned by the Open-Meteo API, accurately mapping each edge case to corresponding custom UI icons and descriptions.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## ⚙️ Running Locally
 
-```
+To run this project on your local machine, follow these steps:
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+1. Clone the repository:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+   ```bash
+   git clone https://github.com/your-username/react-weather-app.git
+   ```
+2. Navigate to the project folder:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+   ```bash
+   cd react-weather-app
+   ```
+3. Install dependencies:
 
-```
+   ```bash
+   npm install
+   ```
+4. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+## 📌 Previous Versions
+- **v1.0 (Vanilla JavaScript):** [Посилання на репозиторій javascript-weather-app]
