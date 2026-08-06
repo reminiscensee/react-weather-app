@@ -3,7 +3,7 @@
 A responsive, feature-rich weather application built with React and TypeScript that provides real-time weather updates and detailed forecasts.
 
 ## 🚀 Live Demo
-[Тут буде посилання на твій задеплоєний сайт на Vercel]
+[Тут буде посилання на твій задеплоєний сайт на Vercel](https://react-weather-app-inky-five.vercel.app/)
 
 ## 📸 Screenshots
 
@@ -61,4 +61,4 @@ To run this project on your local machine, follow these steps:
    ```
 
 ## 📌 Previous Versions
-- **v1.0 (Vanilla JavaScript):** [Посилання на репозиторій javascript-weather-app]
+- **v1.0 (Vanilla JavaScript):** (https://github.com/reminiscensee/javascript-weather-app)
