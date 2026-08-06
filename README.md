@@ -3,7 +3,7 @@
 A responsive, feature-rich weather application built with React and TypeScript that provides real-time weather updates and detailed forecasts.
 
 ## 🚀 Live Demo
-[Тут буде посилання на твій задеплоєний сайт на Vercel](https://react-weather-app-inky-five.vercel.app/)
+[View Live Demo](https://react-weather-app-inky-five.vercel.app/)
 
 ## 📸 Screenshots
 
